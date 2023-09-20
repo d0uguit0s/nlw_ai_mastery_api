@@ -1,2 +1,15 @@
-# @name hello
-GET http://localhost:3333
+# @name get-prompts
+GET http://localhost:3333/prompts
+
+###
+
+# @name upload
+POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+< ./1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
