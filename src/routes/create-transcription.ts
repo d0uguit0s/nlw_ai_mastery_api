@@ -16,6 +16,7 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
     const bodySchema = z.object({
       prompt: z.string()
     })
+    // Palavras chaves sobre o vídeo
     const { prompt } = bodySchema.parse(req.body)
 
     // Caso não encontre o vídeo, lança um erro
